@@ -1,21 +1,23 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 export interface ProgressBarData{
-  proper?: [
-    {
-      name?: string
-      mainStage?: [
-        {
-          name?: string,
-          status?: string,
-          minorStage?: [{
-            name?: string,
-            status?: string
-          }]
-        }
-      ]
-    }
-  ]
+  properType?: ProperType[]
+}
+
+export interface ProperType{
+  name?: string,
+  mainStage?: MainStage[]
+}
+
+export interface MainStage{
+  name?: string,
+  status?: string,
+  minorStage?: MinorStage[]
+}
+
+export interface MinorStage{
+  name?: string,
+  status?: string
 }
 
 @Component({
@@ -25,8 +27,8 @@ export interface ProgressBarData{
 })
 
 export class ProgressBarComponent implements OnInit {
-  progressBarData = {
-    proper: [
+  progressBarData: ProgressBarData = {
+    properType: [
       {
         name: 'Land',
         mainStage: [
