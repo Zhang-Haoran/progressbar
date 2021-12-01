@@ -9,7 +9,7 @@ import {ProgressBarData} from './progress-bar.model';
 
 export class ProgressBarComponent implements OnInit {
 
-  @Input() progressBarData: ProgressBarData | undefined;
+  @Input() progressBarData!: ProgressBarData
   constructor() {
 
   }

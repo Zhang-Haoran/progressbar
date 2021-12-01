@@ -1,3 +1,19 @@
 <section class="progress-bar-container">
+  <div class="progress-bar-body">
+    <div class="progress-bar-track"></div>
+    <div *ngFor="let mainStage of progressBarData.mainStage" class="progress-bar-main-stage">
+      <div style="display: flex; flex-direction: column">
+        <div class="progress-bar-big-circle"></div>
+        <div>{{mainStage.name}}</div>
+      </div>
 
+      <div *ngFor="let minorStage of mainStage.minorStage" class="progress-bar-minor-stage">
+        <div style="display: flex; flex-direction: column">
+          <div class="progress-bar-small-circle"></div>
+          {{minorStage.name}}
+        </div>
+
+      </div>
+    </div>
+  </div>
 </section>
