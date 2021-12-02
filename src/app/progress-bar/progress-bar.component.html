@@ -4,7 +4,7 @@
        [ngClass]="{'completed': stage.status === 'Done','active': stage.status === 'Doing','green': progressBarData.name === 'Building'}">
     <div class="step-counter"
          [ngClass]="{'step-counter-big': stage.minorStage === false, 'step-counter-small': stage.minorStage === true}">
-      {{mainStage.includes(stage.name) ? stage.status === 'Done'? '✓' : mainStage.indexOf(stage.name) + 1 : ''}}
+      {{mainStage.includes(stage.name) ? stage.status === 'Done' ? '✓' : mainStage.indexOf(stage.name) + 1 : ''}}
     </div>
     <div class="step-name">{{stage.name}}</div>
   </div>
