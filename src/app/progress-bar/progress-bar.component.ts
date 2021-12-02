@@ -10,11 +10,25 @@ import {ProgressBarData} from './progress-bar.model';
 export class ProgressBarComponent implements OnInit {
 
   @Input() progressBarData!: ProgressBarData
+  mainStage: any = [];
+  minorStage: any = [];
   constructor() {
 
   }
 
   ngOnInit(): void {
-    console.log(this.progressBarData)
+    this.findMainStage();
+    console.log(this.mainStage);
+    console.log(this.minorStage);
+  }
+
+  findMainStage(){
+    for (let eachStage of this.progressBarData.stage!){
+      if (eachStage.minorStage === false){
+        this.mainStage.push(eachStage.name);
+      }else {
+        this.minorStage.push(eachStage.name);
+      }
+    }
   }
 }
