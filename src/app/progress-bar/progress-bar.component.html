@@ -1,7 +1,7 @@
 <div class="stepper-wrapper">
-  <div *ngFor="let stage of progressBarData.stage; let i = index"
+  <div *ngFor="let stage of progressBarData.stage"
        class="stepper-item"
-       [ngClass]="{'completed': stage.status === 'Done','active': stage.status === 'Doing'}">
+       [ngClass]="{'completed': stage.status === 'Done','active': stage.status === 'Doing','green': progressBarData.name === 'Building'}">
     <div class="step-counter"
          [ngClass]="{'step-counter-big': stage.minorStage === false, 'step-counter-small': stage.minorStage === true}">
       {{mainStage.includes(stage.name) ? stage.status === 'Done'? '✓' : mainStage.indexOf(stage.name) + 1 : ''}}

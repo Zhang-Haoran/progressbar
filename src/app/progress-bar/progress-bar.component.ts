@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, ElementRef, Input, OnInit} from '@angular/core';
 import {ProgressBarData} from './progress-bar.model';
 
 @Component({
@@ -32,4 +32,5 @@ export class ProgressBarComponent implements OnInit {
       }
     }
   }
+
 }

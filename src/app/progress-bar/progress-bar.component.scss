@@ -1,5 +1,5 @@
-$progress-bar-color:#556EE6;
-//$progress-bar-green: #6FCF97;
+$progress-bar-blue:#556EE6;
+$progress-bar-green: #6FCF97;
 $progress-bar-grey: #DFDFDF;
 
 .stepper-wrapper {
@@ -66,21 +66,33 @@ $progress-bar-grey: #DFDFDF;
 
 .stepper-item.active .step-counter {
   //font-weight: bold;
-  background-color: $progress-bar-color;
+  background-color: $progress-bar-blue;
 }
 
 .stepper-item.completed .step-counter {
-  background-color: $progress-bar-color;
+  background-color: $progress-bar-blue;
 }
 
 .stepper-item.completed::after {
   position: absolute;
   content: "";
-  border-bottom: 11px solid $progress-bar-color;
+  border-bottom: 11px solid $progress-bar-blue;
   width: 100%;
   top: 15px;
   left: 50%;
   z-index: 3;
+}
+
+.stepper-item.completed.green::after {
+  border-bottom-color: $progress-bar-green;
+}
+.stepper-item.active.green  .step-counter{
+  //font-weight: bold;
+  background-color: $progress-bar-green;
+}
+
+.stepper-item.completed.green .step-counter{
+  background-color: $progress-bar-green;
 }
 
 .stepper-item:first-child::before {
