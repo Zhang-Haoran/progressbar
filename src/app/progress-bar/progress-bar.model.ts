@@ -1,15 +1,10 @@
 export interface ProgressBarData {
   name?: string,
-  mainStage?: MainStage[]
+  stage?: Stage[]
 }
 
-export interface MainStage {
+export interface Stage {
   name?: string,
   status?: string,
-  minorStage?: MinorStage[]
-}
-
-export interface MinorStage {
-  name?: string,
-  status?: string
+  minorStage?: boolean
 }

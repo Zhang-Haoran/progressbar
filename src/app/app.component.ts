@@ -10,88 +10,102 @@ export class AppComponent {
   title = 'progressbar';
   landData: ProgressBarData = {
     name: 'Land',
-    mainStage: [
+    stage: [
       {
         name: 'Your Property',
         status: 'Done',
-        minorStage: [
-          {
-            name: 'Applying',
-            status: 'Doing'
-          },
-          {
-            name: 'Deposit',
-            status: 'Undone'
-          },
-          {
-            name: 'Pending',
-            status: 'Undone'
-          }
-        ]
+        minorStage: false
+      },
+      {
+        name: 'Applying',
+        status: 'Doing',
+        minorStage: true
+      },
+      {
+        name: 'Deposit',
+        status: 'Undone',
+        minorStage: true
+      },
+      {
+        name: 'Pending',
+        status: 'Undone',
+        minorStage: true
       },
       {
         name: 'Building Contract',
-        status: 'Undone'
+        status: 'Undone',
+        minorStage: false
       },
       {
         name: 'Initial Payment',
-        status: 'Undone'
+        status: 'Undone',
+        minorStage: false
       },
       {
         name: 'Balance Payment',
-        status: 'Undone'
+        status: 'Undone',
+        minorStage: false
       },
       {
         name: 'Settlement',
-        status: 'Undone'
+        status: 'Undone',
+        minorStage: false
       },
       {
         name: 'Completion',
-        status: 'Undone'
+        status: 'Undone',
+        minorStage: false
       }
     ]
 
   }
   buildingData: ProgressBarData = {
     name: 'Building',
-    mainStage: [
+    stage: [
       {
         name: 'Your Property',
         status: 'Done',
-        minorStage: [
-          {
-            name: 'Applying',
-            status: 'Done'
-          },
-          {
-            name: 'Deposit',
-            status: 'Done'
-          },
-          {
-            name: 'Pending',
-            status: 'Done'
-          }
-        ]
+        minorStage: false
+      },
+      {
+        name: 'Applying',
+        status: 'Done',
+        minorStage: true
+      },
+      {
+        name: 'Deposit',
+        status: 'Done',
+        minorStage: true
+      },
+      {
+        name: 'Pending',
+        status: 'Done',
+        minorStage: true
       },
       {
         name: 'Building Contract',
-        status: 'Doing'
+        status: 'Doing',
+        minorStage: false
       },
       {
         name: 'Initial Payment',
-        status: 'Undone'
+        status: 'Undone',
+        minorStage: false
       },
       {
         name: 'Balance Payment',
-        status: 'Undone'
+        status: 'Undone',
+        minorStage: false
       },
       {
         name: 'Settlement',
-        status: 'Undone'
+        status: 'Undone',
+        minorStage: false
       },
       {
         name: 'Completion',
-        status: 'Undone'
+        status: 'Undone',
+        minorStage: false
       }
     ]
   }
