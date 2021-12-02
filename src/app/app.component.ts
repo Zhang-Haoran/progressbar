@@ -109,4 +109,49 @@ export class AppComponent {
       }
     ]
   }
+  propertyData: ProgressBarData = {
+    name: 'Property',
+    stage: [
+      {
+        name: 'Your Property',
+        status: 'Done',
+        minorStage: false
+      },
+      {
+        name: 'Initial Payment',
+        status: 'Done',
+        minorStage: false
+      },
+      {
+        name: 'Balance Payment',
+        status: 'Done',
+        minorStage: false
+      },
+      {
+        name: 'Composition Confirmation',
+        status: 'Doing',
+        minorStage: true
+      },
+      {
+        name: 'Pending',
+        status: 'Undone',
+        minorStage: true
+      },
+      {
+        name: 'Building Contract',
+        status: 'Undone',
+        minorStage: false
+      },
+      {
+        name: 'Settlement',
+        status: 'Undone',
+        minorStage: false
+      },
+      {
+        name: 'Completion',
+        status: 'Undone',
+        minorStage: false
+      }
+    ]
+  }
 }
