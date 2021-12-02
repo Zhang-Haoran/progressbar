@@ -52,9 +52,9 @@ $progress-bar-grey: #DFDFDF;
 .stepper-item::before {
   position: absolute;
   content: "";
-  border-bottom: 2px solid #ccc;
+  border-bottom: 11px solid $progress-bar-grey;
   width: 100%;
-  top: 20px;
+  top: 15px;
   left: -50%;
   z-index: 2;
 }
@@ -62,9 +62,9 @@ $progress-bar-grey: #DFDFDF;
 .stepper-item::after {
   position: absolute;
   content: "";
-  border-bottom: 2px solid #ccc;
+  border-bottom: 2px solid $progress-bar-grey;
   width: 100%;
-  top: 20px;
+  top: 15px;
   left: 50%;
   z-index: 2;
 }
@@ -78,7 +78,7 @@ $progress-bar-grey: #DFDFDF;
   width: 36px;
   height: 36px;
   border-radius: 100%;
-  background: #ccc;
+  background: $progress-bar-grey;
   margin-bottom: 6px;
   &-big{
     width: 36px;
@@ -86,8 +86,8 @@ $progress-bar-grey: #DFDFDF;
   }
   &-small{
     margin-top: 10px;
-    width: 18px;
-    height: 18px;
+    width: 20px;
+    height: 20px;
   }
 }
 
@@ -96,15 +96,15 @@ $progress-bar-grey: #DFDFDF;
 }
 
 .stepper-item.completed .step-counter {
-  background-color: #4bb543;
+  background-color: $progress-bar-green;
 }
 
 .stepper-item.completed::after {
   position: absolute;
   content: "";
-  border-bottom: 2px solid #4bb543;
+  border-bottom: 11px solid $progress-bar-green;
   width: 100%;
-  top: 20px;
+  top: 15px;
   left: 50%;
   z-index: 3;
 }
