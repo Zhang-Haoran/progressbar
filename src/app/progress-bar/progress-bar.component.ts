@@ -10,7 +10,6 @@ import {ProgressBarData} from './progress-bar.model';
 export class ProgressBarComponent implements OnInit {
 
   @Input() progressBarData!: ProgressBarData
-  @Input() barColor!: string
   mainStage: any = [];
   minorStage: any = [];
   constructor() {
